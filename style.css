@@ -18,6 +18,51 @@ header {
   padding: 20px 0;
 }
 
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background-color: #242629; */
+  z-index: 999;
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: all 2.5s ease-in-out;
+}
+
+.right,
+.left {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  z-index: 9999;
+  transition: all 0.5s ease-in-out;
+  background-color: #242629;
+  visibility: inherit;
+  opacity: inherit;
+  overflow: hidden;
+}
+/* .right {
+  background-color: #0fda20;
+}
+.left {
+  background-color: #7289da;
+} */
+
+.loaded .preloader .right {
+  transform: translateX(100%);
+}
+.loaded .preloader .left {
+  transform: translateX(-100%);
+}
+
+.loaded .preloader {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .skor {
   margin: 20px auto;
   border: 3px solid #fff;
@@ -166,4 +211,52 @@ header {
 
 .screen h1 {
   grid-column: span 2;
+}
+
+.left .loader {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: -10px;
+}
+.right .loader {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: -10px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: 0.25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
 }

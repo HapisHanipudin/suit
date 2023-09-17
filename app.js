@@ -128,3 +128,7 @@ function resetGame() {
   hasil.innerHTML = "Ayo pilih gerakanmu!";
   document.body.classList.remove("win", "lose"); // Hapus kelas 'win' dan 'lose' dari body
 }
+
+window.onload = setTimeout(function () {
+  document.body.classList.add("loaded");
+}, 1000);
