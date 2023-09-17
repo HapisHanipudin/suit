@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans";
+}
+
+body {
+  background-color: #282b30;
+  justify-content: center;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans");
+
+header {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.skor {
+  margin: 20px auto;
+  border: 3px solid #fff;
+  width: 200px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 46px;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.badge {
+  background-color: #7289da;
+  padding: 2px 10px;
+  font-size: 14px;
+}
+
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+
+#comp-label {
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.hasil {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pilihan {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2.5em;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.pilih {
+  border: 4px solid transparent;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px transparent;
+}
+
+.pilih img {
+  width: 200px;
+}
+
+.pilih:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+#action-message {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.greenglow {
+  border: 4px solid #0fda20;
+  box-shadow: 0 0 10px #5ae065;
+}
+
+.grayglow {
+  border: 4px solid #757575;
+  box-shadow: 0 0 10px #a5a5a5;
+}
+
+.redglow {
+  border: 4px solid #ff4646;
+  box-shadow: 0 0 10px #e46262;
+}
+
+.yellowglow {
+  border: 4px solid #d6ec0e;
+  box-shadow: 0 0 10px #ebfa6a;
+}
+
+.btn {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+}
+.button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #7289da;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  .pilihan {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, max-content);
+  }
+}
+
+.game-over,
+.you-win {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  color: #fff;
+  background-color: rgba(30, 33, 36, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.lose .game-over,
+.win .you-win {
+  visibility: visible;
+  opacity: 1;
+}
+
+.screen {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: repeat(2, max-content);
+  gap: 1em;
+}
+
+.screen h1 {
+  grid-column: span 2;
+}

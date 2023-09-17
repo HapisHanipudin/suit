@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suit</title>
+    <!-- Script & CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-over">
+      <div class="screen">
+        <h1>Sayang sekali! Game berakhir.</h1>
+        <a href="../home/index.html" class="button">Back To Home</a>
+        <button class="button retry" id="retry" onclick="resetGame()">Try Again</button>
+      </div>
+    </div>
+
+    <div class="you-win">
+      <div class="screen">
+        <h1>Selamat! Kamu menang!</h1>
+        <a href="../home/index.html" class="button">Back To Home</a>
+        <button class="button retry" id="retry" onclick="resetGame()">Try Again</button>
+      </div>
+    </div>
+
+    <header>
+      <h1>Batu Gunting Kertas</h1>
+    </header>
+
+    <div class="skor">
+      <div id="user-label" class="badge">user</div>
+      <div id="comp-label" class="badge">comp</div>
+      <span id="user-score">0</span>:<span id="comp-score">0</span>
+    </div>
+
+    <div class="hasil">
+      <p>Ayo pilih gerakanmu!</p>
+    </div>
+
+    <div class="pilihan">
+      <div class="pilih" id="b">
+        <img src="assets/rock.png" alt="" class="" />
+      </div>
+      <div class="pilih" id="g">
+        <img src="assets/scissors.png" alt="" />
+      </div>
+      <div class="pilih" id="k">
+        <img src="assets/paper.png" alt="" />
+      </div>
+    </div>
+
+    <p id="action-message">Pilih gerakanmu!</p>
+    <div class="btn">
+      <a href="../home/index.html" class="button">Back To Home</a>
+    </div>
+    <!-- Script -->
+    <script src="app.js"></script>
+  </body>
+</html>
